@@ -7,7 +7,7 @@ const Pieza = ({ item, eliminarPieza, abrirDetalle }) => {
       <View style={styles.pieza}>
         <View style={styles.header}>
             <Text style={styles.labelHeader}>Repuesto:</Text>
-            {/* Adaptado al nombre de variable de tu compañera */}
+      
             <Text style={styles.textoPrincipal}>{item.pieza}</Text>
         </View>
 
