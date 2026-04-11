@@ -7,8 +7,8 @@ const Pieza = ({ item, eliminarPieza, abrirDetalle }) => {
       <View style={styles.pieza}>
         <View style={styles.header}>
             <Text style={styles.labelHeader}>Repuesto:</Text>
-      
-            <Text style={styles.textoPrincipal}>{item.pieza}</Text>
+           
+            <Text style={styles.textoPrincipal}>{item.tipoPieza}</Text>
         </View>
 
         <View style={styles.infoRow}>
