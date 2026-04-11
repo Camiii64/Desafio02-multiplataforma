@@ -16,6 +16,7 @@ import colors from "../utils/colors";
 const Formulario = ({ piezas, setPiezas, guardarMostrarForm, guardarPiezasStorage }) => {
 
   // ── Estado de cada campo
+  const [tipoPieza, guardarTipoPieza]     = useState("");
   const [marca, guardarMarca]             = useState("");
   const [noSerie, guardarNoSerie]         = useState("");
   const [precio, guardarPrecio]           = useState("");
@@ -186,7 +187,7 @@ const Formulario = ({ piezas, setPiezas, guardarMostrarForm, guardarPiezasStorag
 // ── Estilos
 const styles = StyleSheet.create({
   formulario: {
-    backgroundColor: "#FFF",
+    backgroundColor: colors.BACKGROUND,
     paddingHorizontal: 20,
     paddingVertical: 10,
     flex: 1,
@@ -195,15 +196,18 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 18,
     marginTop: 20,
+    color: colors.PRIMARY_COLOR,
   },
   input: {
     marginTop: 10,
     height: 50,
-    borderColor: "#e1e1e1",
+    borderColor: colors.BORDER_COLOR,
     borderWidth: 1,
     borderStyle: "solid",
     paddingHorizontal: 10,
     borderRadius: 6,
+    backgroundColor: "#FFF",
+    color: "#333",
   },
   btnFecha: {
     padding: 10,
@@ -212,7 +216,7 @@ const styles = StyleSheet.create({
     borderRadius: 6,
   },
   textoFecha: {
-    color: "#FFF",
+    color: colors.TEXT_PRIMARY,
     fontWeight: "bold",
     textAlign: "center",
     fontSize: 16,
@@ -220,8 +224,9 @@ const styles = StyleSheet.create({
   fechaSeleccionada: {
     fontSize: 16,
     marginTop: 5,
-    color: "#333",
+    color: colors.SECONDARY_COLOR,
     textAlign: "center",
+    fontWeight: "bold",
   },
   btnSubmit: {
     padding: 10,
@@ -231,13 +236,13 @@ const styles = StyleSheet.create({
   },
   btnCancelar: {
     padding: 10,
-    backgroundColor: "#e74c3c",
+    backgroundColor: colors.DANGER_COLOR,
     marginVertical: 5,
     marginBottom: 30,
     borderRadius: 6,
   },
   textoSubmit: {
-    color: "#FFF",
+    color: colors.TEXT_PRIMARY,
     fontWeight: "bold",
     textAlign: "center",
     fontSize: 16,
